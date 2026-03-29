@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Boat Train</title>
+
+  <style>
+    body {
+      background: linear-gradient(to bottom, #002c9b, #0077cc, #4fc3ff, #fff066);
+      color: #000;
+      font-family: Comic Sans MS, Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .top-bar {
+      background: red;
+      color: white;
+      padding: 8px;
+      font-weight: bold;
+      border-bottom: 4px solid yellow;
+    }
+
+    .logo {
+      margin-top: 20px;
+      border: 5px solid white;
+      box-shadow: 0 0 20px yellow, 0 0 40px red;
+      background: blue;
+      padding: 10px;
+      display: inline-block;
+    }
+
+    h1 {
+      font-size: 56px;
+      color: white;
+      text-shadow: 3px 3px red, 6px 6px yellow, 9px 9px blue;
+      margin: 10px 0;
+    }
+
+    marquee {
+      background: white;
+      color: blue;
+      font-weight: bold;
+      padding: 8px;
+      border-top: 4px solid red;
+      border-bottom: 4px solid red;
+    }
+
+    .nav {
+      background: #0033cc;
+      padding: 12px;
+      border-top: 5px solid white;
+      border-bottom: 5px solid yellow;
+    }
+
+    .nav a {
+      margin: 6px;
+      padding: 10px 14px;
+      background: yellow;
+      color: red;
+      text-decoration: none;
+      font-weight: bold;
+      border: 3px solid white;
+      display: inline-block;
+    }
+
+    .box {
+      width: 85%;
+      max-width: 960px;
+      margin: 20px auto;
+      background: white;
+      border: 6px solid red;
+      padding: 20px;
+      box-shadow: 0 0 20px blue;
+    }
+
+    .section-title {
+      font-size: 30px;
+      color: blue;
+      text-shadow: 2px 2px yellow;
+      margin-bottom: 12px;
+      font-weight: bold;
+    }
+
+    audio {
+      margin-top: 10px;
+      width: 90%;
+      max-width: 500px;
+    }
+
+    .slideshow-image {
+      width: 100%;
+      max-width: 700px;
+      max-height: 500px;
+      object-fit: contain;
+      border: 5px solid white;
+      background: black;
+    }
+
+    .slide-button {
+      margin: 6px;
+      padding: 10px 16px;
+      background: yellow;
+      color: red;
+      font-weight: bold;
+      border: 3px solid blue;
+      cursor: pointer;
+    }
+
+    .tv-shell {
+      background: #111;
+      border: 8px solid blue;
+      padding: 15px;
+      margin-top: 15px;
+    }
+
+    .tv-screen img {
+      width: 100%;
+      max-width: 700px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="top-bar">BOAT TRAIN FAN SITE</div>
+
+  <img src="logo.png" width="400" class="logo">
+
+  <h1>BOAT TRAIN</h1>
+
+  <marquee>WELCOME TO THE BOAT TRAIN FAN EXPERIENCE</marquee>
+
+  <div class="nav">
+    <a href="#music">Music</a>
+    <a href="#photos">Photos</a>
+    <a href="#tv">TV</a>
+  </div>
+
+  <div class="box" id="music">
+    <div class="section-title">BOAT TRAIN RADIO</div>
+
+    <p><b>Now Playing:</b> Gone to the Sea (Acoustic)</p>
+
+    <audio controls loop id="player">
+      <source src="Gone-to-the-sea.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <p>Click anywhere to start the music.</p>
+  </div>
+
+  <div class="box" id="photos">
+    <div class="section-title">PHOTO SLIDESHOW</div>
+
+    <img id="slideImage" class="slideshow-image" src="Easton.png">
+    <br>
+    <button class="slide-button" onclick="prevSlide()">PREVIOUS</button>
+    <button class="slide-button" onclick="nextSlide()">NEXT</button>
+  </div>
+
+  <div class="box" id="tv">
+    <div class="section-title">BOAT TRAIN TV</div>
+
+    <div class="tv-shell">
+      <a href="https://www.youtube.com/watch?v=UvsiGNtrg98" target="_blank">
+        <img src="https://img.youtube.com/vi/UvsiGNtrg98/hqdefault.jpg">
+      </a>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener("click", function () {
+      const audio = document.getElementById("player");
+      audio.play().catch(() => {});
+    }, { once: true });
+
+    const slides = [
+      "Easton.png",
+      "Derek.png",
+      "Adam.png",
+      "41.jpg",
+      "40.jpg",
+      "39.jpg",
+      "38.jpg",
+      "37.jpg",
+      "36.jpg",
+      "35.jpg"
+    ];
+
+    let current = 0;
+
+    function showSlide(i) {
+      document.getElementById("slideImage").src = slides[i];
+    }
+
+    function nextSlide() {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }
+
+    function prevSlide() {
+      current = (current - 1 + slides.length) % slides.length;
+      showSlide(current);
+    }
+  </script>
+
+</body>
+</html>

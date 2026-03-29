@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boat Train</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f9fc;
+      color: #1f2937;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+      text-align: center;
+    }
+
+    .logo {
+      max-width: 260px;
+      width: 100%;
+      height: auto;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin: 0 0 12px;
+      color: #0f172a;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: #475569;
+      max-width: 680px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+      align-items: stretch;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #dbe3ee;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+      padding: 28px;
+      width: 400px;
+      max-width: 100%;
+      text-align: left;
+      box-sizing: border-box;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 24px;
+      color: #0f172a;
+    }
+
+    .card p {
+      margin-bottom: 24px;
+      line-height: 1.6;
+      color: #475569;
+    }
+
+    .button {
+      display: inline-block;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 12px 18px;
+      border-radius: 10px;
+      transition: 0.2s ease;
+    }
+
+    .button-professional {
+      background: #0f172a;
+      color: white;
+    }
+
+    .button-professional:hover {
+      background: #1e293b;
+    }
+
+    .button-fan {
+      background: #ffef5c;
+      color: #d62828;
+      border: 3px solid #2563eb;
+      box-shadow: 4px 4px 0 #d62828;
+      font-family: "Comic Sans MS", Arial, sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .button-fan:hover {
+      background: #d62828;
+      color: #ffef5c;
+    }
+
+    .footer {
+      margin-top: 48px;
+      font-size: 14px;
+      color: #64748b;
+    }
+
+    @media (max-width: 860px) {
+      h1 {
+        font-size: 34px;
+      }
+
+      .subtitle {
+        font-size: 16px;
+      }
+
+      .card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="landing-logo.png" alt="Boat Train logo" class="logo">
+
+    <h1>Boat Train</h1>
+    <p class="subtitle">
+      Welcome. Choose between the official page for booking and professional links,
+      or the fan page for the full retro Boat Train experience.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <h2>Official Page</h2>
+        <p>
+          Visit the professional Boat Train page for booking, contact information,
+          and official links.
+        </p>
+        <a class="button button-professional" href="https://linktr.ee/BoatTrain" target="_blank">
+          Visit Official Page
+        </a>
+      </div>
+
+      <div class="card">
+        <h2>Fan Page</h2>
+        <p>
+          Enter the colorful retro fan site with music, photos, Boat Train TV,
+          and all the tropical weirdness.
+        </p>
+        <a class="button button-fan" href="fanpage.html">
+          Enter Fan Page
+        </a>
+      </div>
+    </div>
+
+    <div class="footer">
+      Boat Train
+    </div>
+  </div>
+</body>
+</html>
